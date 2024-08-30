@@ -1,10 +1,7 @@
 <?php 
-
     include('../config/constants.php'); 
     include('login-check.php');
-
 ?>
-
 
 <html>
     <head>
@@ -12,9 +9,7 @@
 
         <link rel="stylesheet" href="../css/admin.css">
     </head>
-    
     <body>
-        <!-- Menu Section Starts -->
         <div class="menu text-center">
             <div class="wrapper">
                 <ul>
@@ -27,4 +22,3 @@
                 </ul>
             </div>
         </div>
-        <!-- Menu Section Ends -->
