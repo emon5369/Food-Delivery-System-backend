@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2024 at 09:29 PM
+-- Generation Time: Sep 17, 2024 at 06:58 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,9 +39,9 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id`, `full_name`, `username`, `password`) VALUES
-(10, 'Vijay Thapa', 'vijaythapa', 'f3ed11bbdb94fd9ebdefbaf646ab94d3'),
 (12, 'Administrator', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
-(13, 'Emon Hossain', 'emon', '81dc9bdb52d04dc20036dbd8313ed055');
+(13, 'Emon Hossain', 'emon', '81dc9bdb52d04dc20036dbd8313ed055'),
+(15, 'Siam Ahmed', 'siam', '81dc9bdb52d04dc20036dbd8313ed055');
 
 -- --------------------------------------------------------
 
@@ -64,7 +64,7 @@ CREATE TABLE `tbl_category` (
 INSERT INTO `tbl_category` (`id`, `title`, `image_name`, `featured`, `active`) VALUES
 (4, 'Pizza', 'Food_Category_790.jpg', 'Yes', 'Yes'),
 (5, 'Burger', 'Food_Category_344.jpg', 'Yes', 'Yes'),
-(6, 'MoMo', 'Food_Category_77.jpg', 'Yes', 'Yes'),
+(6, 'Momo', 'Food_Category_77.jpg', 'Yes', 'Yes'),
 (9, 'Fried Chicken', 'pexels-saveurssecretes-5476229.jpg', 'Yes', 'Yes');
 
 -- --------------------------------------------------------
@@ -153,26 +153,17 @@ INSERT INTO `tbl_order` (`id`, `food`, `price`, `qty`, `total`, `order_date`, `s
 (11, 'Smoky BBQ Pizza', 6.00, 2, 12.00, '2024-08-07 13:31:25', 'Delivered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
 (12, 'Crispy Chicks', 4.00, 1, 4.00, '2024-08-07 19:56:31', 'Delivered', 'Siam Ahmed', '01834567321', 'Siam@gmail.com', 'Hazaribag, Dhaka'),
 (13, 'Flavor Fusion Fries', 5.00, 2, 10.00, '2024-08-07 19:56:31', 'On Delivery', 'Siam Ahmed', '01834567321', 'Siam@gmail.com', 'Hazaribag, Dhaka'),
-(14, 'Chicken Momo Dumplings', 5.00, 10, 50.00, '2024-08-08 00:34:02', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
 (15, 'Chicken Momo Dumplings', 5.00, 2, 10.00, '2024-08-12 15:56:32', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
-(16, 'Ham Burger', 4.00, 5, 20.00, '2024-08-12 15:56:32', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
-(17, 'Smoky BBQ Pizza', 6.00, 2, 12.00, '2024-08-25 05:29:07', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
-(18, 'Veg pizza', 9.00, 1, 9.00, '2024-08-25 05:29:07', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
 (19, 'Crispy Chicks', 4.00, 1, 4.00, '2024-08-25 05:29:07', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
-(20, 'Flavor Fusion Fries', 5.00, 2, 10.00, '2024-08-25 05:29:07', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
-(21, 'Smoky BBQ Pizza', 6.00, 2, 12.00, '2024-08-29 06:00:24', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
-(22, 'Beef Burger', 3.00, 2, 6.00, '2024-08-29 08:45:15', 'Ordered', 'Saiful Islam', '0138475940', 'saiful@gmail.com', 'Mohammadpur'),
-(23, 'Veg pizza', 9.00, 2, 18.00, '2024-08-29 08:45:15', 'Ordered', 'Saiful Islam', '0138475940', 'saiful@gmail.com', 'Mohammadpur'),
-(24, 'Smoky BBQ Pizza', 6.00, 2, 12.00, '2024-08-29 18:27:22', 'Ordered', 'Saiful Islam', '0138475940', 'saiful@gmail.com', 'Mohammadpur'),
 (25, 'Mixed Pizza', 10.00, 1, 10.00, '2024-08-29 18:27:22', 'Ordered', 'Saiful Islam', '0138475940', 'saiful@gmail.com', 'Mohammadpur'),
-(26, 'Chicken Momo Dumplings', 5.00, 2, 10.00, '2024-08-29 19:22:59', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
-(27, 'Ham Burger', 4.00, 2, 8.00, '2024-08-29 19:22:59', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
-(28, 'Chicken Momo Dumplings', 5.00, 1, 5.00, '2024-08-29 19:27:16', 'Ordered', 'Saif alam', '0156790443', 'saif@gmail.com', 'Gulshan, Dhaka'),
 (29, 'Ham Burger', 4.00, 2, 8.00, '2024-08-29 19:27:16', 'Ordered', 'Saif alam', '0156790443', 'saif@gmail.com', 'Gulshan, Dhaka'),
-(30, 'Ham Burger', 4.00, 1, 4.00, '2024-08-29 19:39:13', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
 (31, 'Flavor Fusion Fries', 5.00, 4, 20.00, '2024-08-29 19:39:13', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
-(32, 'Chicken Momo Dumplings', 5.00, 4, 20.00, '2024-08-29 19:43:48', 'Ordered', 'Saif alam', '01567890264', 'saif@gmail.com', 'Gulshan, Dhaka'),
-(33, 'Ham Burger', 4.00, 8, 32.00, '2024-08-29 19:43:48', 'Ordered', 'Saif alam', '01567890264', 'saif@gmail.com', 'Gulshan, Dhaka');
+(33, 'Ham Burger', 4.00, 8, 32.00, '2024-08-29 19:43:48', 'Ordered', 'Saif alam', '01567890264', 'saif@gmail.com', 'Gulshan, Dhaka'),
+(39, 'Ham Burger', 4.00, 2, 8.00, '2024-09-02 05:48:51', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
+(40, 'Smoky BBQ Pizza', 6.00, 4, 24.00, '2024-09-14 10:02:15', 'Cancelled', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
+(41, 'Veg pizza', 9.00, 5, 45.00, '2024-09-14 10:02:15', 'Delivered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
+(42, 'Chicken Momo Dumplings', 5.00, 3, 15.00, '2024-09-15 15:26:37', 'Ordered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka'),
+(43, 'Ham Burger', 4.00, 2, 8.00, '2024-09-15 15:26:37', 'Delivered', 'Md. Emon Hossain ', '01610601762', 'emon5369@gmail.com', 'Dhanmondi, Dhaka');
 
 -- --------------------------------------------------------
 
@@ -248,13 +239,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tbl_food`
@@ -272,7 +263,7 @@ ALTER TABLE `tbl_messages`
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `users`
