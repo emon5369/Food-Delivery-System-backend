@@ -6,7 +6,6 @@ header("Access-Control-Allow-Headers: Content-Type");
 include('config.php');
 
 $data = json_decode(file_get_contents('php://input'), true);
-
 $name = isset($data['name']) ? $conn->real_escape_string($data['name']) : '';
 $email = isset($data['email']) ? $conn->real_escape_string($data['email']) : '';
 $message = isset($data['message']) ? $conn->real_escape_string($data['message']) : '';

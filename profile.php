@@ -14,8 +14,7 @@ if (empty($token)) {
     exit;
 }
 
-$userId = $token; //assuming the token is the user ID
-
+$userId = $token; 
 $sql = "SELECT name, contact, email, address FROM users WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $userId);

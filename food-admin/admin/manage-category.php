@@ -2,9 +2,9 @@
 
 <div class="main-content">
     <div class="wrapper">
-        <h1>Manage Category</h1>
+        <h1 class="heading">Manage Category</h1>
 
-        <br /><br />
+        <br />
         <?php 
         
             if(isset($_SESSION['add']))
@@ -52,8 +52,7 @@
         ?>
         <br><br>
 
-        <!-- Button to Add Category -->
-        <a href="<?php echo SITEURL; ?>admin/add-category.php" class="btn-primary">Add Category</a>
+        <a href="<?php echo SITEURL; ?>admin/add-category.php" class="add-btn">Add Category</a>
 
         <br /><br /><br />
 
@@ -67,23 +66,14 @@
             </tr>
 
             <?php 
-                // Query to Get all Categories from Database
                 $sql = "SELECT * FROM tbl_category";
-
-                // Execute Query
                 $res = mysqli_query($conn, $sql);
-
-                // Count Rows
                 $count = mysqli_num_rows($res);
-
-                // Create Serial Number Variable and assign value as 1
                 $sn = 1;
 
-                // Check whether we have data in database or not
                 if($count > 0)
                 {
-                    // We have data in database
-                    // Get the data and display
+                    
                     while($row = mysqli_fetch_assoc($res))
                     {
                         $id = $row['id'];
@@ -99,8 +89,12 @@
                             <td><?php echo $featured; ?></td>
                             <td><?php echo $active; ?></td>
                             <td>
-                                <a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id; ?>" class="btn-secondary">Update Category</a>
-                                <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>" class="btn-danger">Delete Category</a>
+                                <table class="tbl-full">
+                                    <tr>
+                                        <td><a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id; ?>" class="btn-secondary">Update Category</a></td>
+                                        <td><a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>" class="btn-danger">Delete Category</a></td>
+                                    </tr>
+                                </table>    
                             </td>
                         </tr>
 
@@ -109,8 +103,6 @@
                 }
                 else
                 {
-                    // We do not have data
-                    // We'll display the message inside table
                     ?>
 
                     <tr>
