@@ -120,34 +120,16 @@
         <?php 
             if(isset($_POST['submit']))
             {
-                
                 $id = $_POST['id'];
-                $price = $_POST['price'];
-                $qty = $_POST['qty'];
-
-                $total = $price * $qty;
-
                 $status = $_POST['status'];
 
-                $customer_name = $_POST['customer_name'];
-                $customer_contact = $_POST['customer_contact'];
-                $customer_email = $_POST['customer_email'];
-                $customer_address = $_POST['customer_address'];
-
                 $sql2 = "UPDATE tbl_order SET 
-                    qty = $qty,
-                    total = $total,
-                    status = '$status',
-                    customer_name = '$customer_name',
-                    customer_contact = '$customer_contact',
-                    customer_email = '$customer_email',
-                    customer_address = '$customer_address'
+                    status = '$status'
                     WHERE id=$id
                 ";
 
                 $res2 = mysqli_query($conn, $sql2);
 
-                
                 if($res2==true)
                 {
                     $_SESSION['update'] = "<div class='success'>Order Updated Successfully.</div>";
