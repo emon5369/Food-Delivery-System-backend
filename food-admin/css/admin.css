@@ -38,6 +38,14 @@
 .tbl-full {
   width: 100%;
 }
+.tbl-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tbl-50{
+  width: 50%;
+}
 
 table tr th {
   border: 1px solid black;

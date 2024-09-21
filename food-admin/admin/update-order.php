@@ -42,30 +42,58 @@
         
         ?>
 
-        <form action="" method="POST">
+        <form action="" method="POST" class="tbl-center">
         
-            <table class="tbl-30">
+            <table class="tbl-50">
                 <tr>
-                    <td>Food Name</td>
+                    <td>Food Name:</td>
                     <td><b> <?php echo $food; ?> </b></td>
                 </tr>
 
                 <tr>
-                    <td>Price</td>
+                    <td>Price:</td>
                     <td>
                         <b> $ <?php echo $price; ?></b>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>Qty</td>
+                    <td>Quantity:</td>
                     <td>
-                        <input type="number" name="qty" value="<?php echo $qty; ?>">
+                    <b> <?php echo $qty; ?> </b>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>Status</td>
+                    <td>Customer Name: </td>
+                    <td>
+                    <b> <?php echo $customer_name; ?> </b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Customer Contact: </td>
+                    <td>
+                    <b> <?php echo $customer_contact; ?> </b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Customer Email: </td>
+                    <td>
+                    <b> <?php echo $customer_email; ?> </b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Customer Address: </td>
+                    <td>
+                    <b> <?php echo $customer_address; ?> </b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Status:</td>
                     <td>
                         <select name="status">
                             <option <?php if($status=="Ordered"){echo "selected";} ?> value="Ordered">Ordered</option>
@@ -77,34 +105,9 @@
                 </tr>
 
                 <tr>
-                    <td>Customer Name: </td>
                     <td>
-                        <input type="text" name="customer_name" value="<?php echo $customer_name; ?>">
+                        Update:
                     </td>
-                </tr>
-
-                <tr>
-                    <td>Customer Contact: </td>
-                    <td>
-                        <input type="text" name="customer_contact" value="<?php echo $customer_contact; ?>">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Customer Email: </td>
-                    <td>
-                        <input type="text" name="customer_email" value="<?php echo $customer_email; ?>">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Customer Address: </td>
-                    <td>
-                        <textarea name="customer_address" cols="30" rows="5"><?php echo $customer_address; ?></textarea>
-                    </td>
-                </tr>
-
-                <tr>
                     <td clospan="2">
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <input type="hidden" name="price" value="<?php echo $price; ?>">
