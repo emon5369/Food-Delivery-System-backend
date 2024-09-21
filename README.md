@@ -77,4 +77,3 @@ The frontend of this project, built with **React**, is available in a separate r
 - **Real-time Updates:** Implement real-time order status updates using WebSockets or similar technologies.
 - **Enhanced Security:** Add OAuth or JWT for enhanced user authentication.
 - **Performance Optimization:** Implement database indexing and query optimization for large datasets.
----
