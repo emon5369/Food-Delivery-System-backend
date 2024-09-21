@@ -57,7 +57,8 @@ git clone https://github.com/your-username/food-delivery-backend.git
 
 ### 3. Deploy PHP Files
 
-- Place the backend files on your local or remote server (e.g., XAMPP `htdocs` or a remote server).
+- Place the backend folder on your local or remote server (e.g., XAMPP `htdocs` or a remote server).
+- Rename this folder to reactphp to match server configurations or paths
 - Ensure PHP and MySQL are running properly.
 
 ### 4. Run the Backend
